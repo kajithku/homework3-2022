@@ -105,13 +105,15 @@ nav a:focus {
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
   row-gap: 30px;
+  /* position: relative; */
   
 }
 
 /* Requirements 6-10 here: */
 div.intro{
   /* The image used */
-  background: #DDDDDD url("../images/header.jpg");
+  background-color: #DDDDDD;
+  background-image: url("../images/header.jpg");
 
   /* Set a specific height */
   min-height: 400px; 
@@ -125,17 +127,18 @@ div.intro{
 
 .about, .clients, .method, .contact {
   grid-column: 2 / span 1;
-  
+  /* overflow: scroll; */
+  /* overflow: hidden; */
 }
 
 img {
   width: 100%;
-  overflow: hidden;
 }
 
 .about-image, .clients-image, .method-image, .contact-image {
   grid-column: 1 / span 3;
   max-height: 500px;
+  overflow: hidden;
 }
 
 .about, .about-image {
@@ -150,7 +153,7 @@ img {
 
 .method, .method-image {
   grid-row-start: 3;
-  grid-row-end: 4;
+  grid-row-end: 4; 
 }
 
 .contact, .contact-image {
@@ -159,11 +162,10 @@ img {
 }
 
 .text {
-  text-align: center;
+  align-self: center;
   max-height: 25%;
-  overflow-y: auto;
-  margin: auto;
-
+  overflow: auto;
+  
 }
 
 @media screen and (min-width: 700px){
@@ -175,11 +177,6 @@ img {
   }
   
   /* Requirements 12-15 here: */
-  /* nav ul{ */
-    /* float: right; */
-    /* width: 60%; */
-    /* text-align: right; */
-  /* } */
 
   a.skip:focus {
     position: absolute;
@@ -191,6 +188,7 @@ img {
     display: grid;
     grid-template-columns: 50px auto 500px auto 50px;
     grid-template-rows: 300px 300px 300px 300px;
+    /* position: relative; */
   }
 
   .about, .method, .clients-image, .contact-image {
