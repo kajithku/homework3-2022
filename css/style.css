@@ -104,17 +104,15 @@ nav a:focus {
   /* Requirement 5 code here*/
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
+  grid-template-rows: auto;
   row-gap: 30px;
-  /* position: relative; */
-  
 }
 
 /* Requirements 6-10 here: */
-div.intro{
+.intro{
   /* The image used */
-  background-color: #DDDDDD;
   background-image: url("../images/header.jpg");
-
+  background-color: #858585;
   /* Set a specific height */
   min-height: 400px; 
 
@@ -127,8 +125,6 @@ div.intro{
 
 .about, .clients, .method, .contact {
   grid-column: 2 / span 1;
-  /* overflow: scroll; */
-  /* overflow: hidden; */
 }
 
 img {
@@ -163,9 +159,8 @@ img {
 
 .text {
   align-self: center;
-  max-height: 25%;
-  overflow: auto;
-  
+  max-height: 25vh;
+  overflow: scroll;
 }
 
 @media screen and (min-width: 700px){
@@ -188,7 +183,6 @@ img {
     display: grid;
     grid-template-columns: 50px auto 500px auto 50px;
     grid-template-rows: 300px 300px 300px 300px;
-    /* position: relative; */
   }
 
   .about, .method, .clients-image, .contact-image {
